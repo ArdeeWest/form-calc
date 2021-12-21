@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form class="calc" method="GET">
+        <fieldset class="calc__group">
+          <legend class="calc__legend">Калькулятор</legend>
+          <label class="calc__label"
+            ><span class="calc__label-text">Число</span>
+            <input
+              id="n1"
+              class="calc__input"
+              type="number"
+              placeholder="Вкажіть будь-яке число"
+              required
+            />
+          </label>
+          <label class="calc__label"
+            ><span class="calc__label-text">Що з ним зробити?</span>
+            <select id="operator" class="calc__select">
+              <option value="add">Додати</option>
+              <option value="subtract">Відняти</option>
+              <option value="divide">Поділити</option>
+              <option value="multiply">Помножити</option>
+            </select>
+          </label>
+          <label class="calc__label"
+            ><span class="calc__label-text">Число</span>
+            <input
+              id="n2"
+              class="calc__input"
+              type="number"
+              placeholder="Вкажіть ще одне число"
+              required
+            />
+          </label>
+          <button class="calc__button" type="button" id="calc__btn">Отримати результат</button>
+          <label class="calc__label"
+            ><span class="calc__label-text">Результат</span>
+            <input id="result" class="calc__input" type="number" disabled />
+          </label>
+        </fieldset>
+      </form>
+    </main>
+    <script src="calc.js"></script>
+  </body>
+</html>
